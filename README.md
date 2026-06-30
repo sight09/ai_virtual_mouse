@@ -1,4 +1,23 @@
-# AI Virtual Mouse - Hand Gesture Recognition System
+<h1 align="center">🖱️AI Virtual Mouse - Hand Gesture Recognition System </h1>
+
+<p align="center">
+  <img src="assets/virtual-mouse-banner.png" width="100%" alt="AI Virtual Mouse Banner">
+</p>
+
+<p align="center">
+Control your computer using AI-powered hand gesture recognition with Python, OpenCV, MediaPipe, and PyAutoGUI.
+</p>
+
+<p align="center">
+<img src="https://img.shields.io/badge/Python-3.11-blue?logo=python">
+<img src="https://img.shields.io/badge/OpenCV-Computer%20Vision-green">
+<img src="https://img.shields.io/badge/MediaPipe-Hand%20Tracking-orange">
+<img src="https://img.shields.io/badge/License-MIT-blue">
+</p>
+
+
+
+
 
 A professional-grade Python application that allows you to control your computer entirely through hand gestures detected by your webcam. This system replaces traditional mouse interactions with intuitive, real-time gesture controls powered by computer vision and machine learning.
 

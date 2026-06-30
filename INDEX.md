@@ -19,7 +19,7 @@ Choose your role:
 
 ### 👤 I'm a User (Want to use the app)
 1. **First Time?** → Read `QUICKSTART.md` (5 minutes)
-2. **Install** → Double-click 
+2. **Install** → Double-click `run.bat` (Windows) or run `./run.sh` (Mac/Linux)
 3. **Use** → Start with basic gestures (point finger, click, scroll)
 4. **Learn** → Check `README.md` for full gesture reference
 
@@ -86,7 +86,7 @@ python main.py
 - Full error handling
 - Comprehensive logging
 
-### ✅ Full Documentation`run.bat` (Windows) or run `./run.sh` (Mac/Linux)
+### ✅ Full Documentation
 - 1500+ lines of guides
 - Developer reference
 - User tutorials
@@ -311,7 +311,7 @@ Everything is set up and ready to use.
 - **Version**: 1.0.0
 - **Status**: ✅ Complete & Tested
 - **License**: MIT
-- **Created**: 2026
+- **Created**: 2024
 - **Python**: 3.11+
 - **Platform**: Windows, macOS, Linux
 

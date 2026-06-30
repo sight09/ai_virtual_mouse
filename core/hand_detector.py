@@ -4,7 +4,6 @@ Detects and tracks hand landmarks using MediaPipe
 """
 
 import mediapipe as mp
-from mediapipe.framework.formats import landmark_pb2
 import cv2
 import numpy as np
 import logging
@@ -98,13 +97,14 @@ class HandDetector:
         try:
             # Convert landmarks back to MediaPipe format for drawing
             for hand in hands:
-                hand_landmarks = landmark_pb2.NormalizedLandmarkList()
+                landmarks_proto = mp.solutions.hands.HandLandmark
+                hand_landmarks = mp.framework.formats.landmark_pb2.NormalizedLandmarkList()
 
                 for landmark in hand.landmarks:
-                    landmark_proto = landmark_pb2.NormalizedLandmark()
-                    landmark_proto.x = float(landmark[0])
-                    landmark_proto.y = float(landmark[1])
-                    landmark_proto.z = float(landmark[2])
+                    landmark_proto = mp.framework.formats.landmark_pb2.NormalizedLandmark()
+                    landmark_proto.x = landmark[0]
+                    landmark_proto.y = landmark[1]
+                    landmark_proto.z = landmark[2]
                     hand_landmarks.landmark.append(landmark_proto)
 
                 self.mp_drawing.draw_landmarks(
@@ -122,8 +122,5 @@ class HandDetector:
 
     def __del__(self):
         """Cleanup"""
-        if hasattr(self, 'hands') and self.hands:
-            try:
-                self.hands.close()
-            except Exception:
-                pass
+        if self.hands:
+            self.hands.close()
